@@ -36,7 +36,7 @@ DeviceFileEvents
 | where DeviceName == "vm-hunt-sidi"  
 | where InitiatingProcessAccountName == "labuser"  
 | where FileName contains "tor"  
-| where Timestamp >= datetime(2024-03) 
+| where Timestamp >= datetime(2026-03) 
 | order by Timestamp desc  
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
 ```
